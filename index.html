@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    
+    .row.content {height: 500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #3f3f3f;
+      height: 270%;
+      
+    }
+
+
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 1000px) {
+      .sidenav {
+        height: auto;
+        padding: 50px;
+        margin: 100px;
+      }
+      .row.content {height: 1px;} 
+
+    }
+
+
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+
+
+
+
+
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+/* demo */
+body {
+  font-family: 'Poppins', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  font-size: 1.5rem;
+  background-color:#222222;
+}
+
+    textarea {
+ width: 900px;
+ height: 300px;
+ background-color: transparent;
+ font-size: 1em;
+ font-family: Verdana;
+ border: 1px solid grey;
+}
+    
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.ost-multi-header::after{
+  content: 'Hello World!';
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+}
+
+.gradiantthing{
+  height: 1.5px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(8,37,140,1) 44%, rgba(0,212,255,1) 100%);
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <div class="ost-multi-header">
+      <br>
+      <h4><font color="#FFFFFF" style  = font-size:2vw >Summarizer</font></h4>
+      <div class="gradiantthing"></div>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="https://website.henryliu20.repl.co/" style="color:#ffffff; font-size:1.5vw">AI Detection</a></li>
+        <li><a href="https://website2.henryliu20.repl.co/" style="color:#ffffff; font-size:1.5vw">Summarizer</a></li>
+        <li><a href="#section3" style="color:#ffffff; font-size:1.5vw">Process</a></li>
+      </ul><br>
+      <div class="input-group">
+       
+        <span class="input-group-btn">
+          
+        </span>
+      </div>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      
+      <h2><center><font color="#FFFFFF" style="font-size:2vw">Summarizer</font></center></h2>
+      <hr>
+      <br>
+      <body>
+        <form method="post">
+            <textarea name="context" rows="10" cols="50" style = "color:white;" placeholder="Enter your text here...">{{ context }}</textarea>
+            <br>
+            <input type="submit" value="Summarize">
+        </form>
+        {% if summary %}
+            <h2 style = "color:white;">Summary:</h2>
+            <p style = "color:white;">{{ summary }}</p>
+        {% endif %}
+    </body>
+
+
+        <br>
+      <br>
+      <br>
+      <br>
+      <hr>
+      
+
+      <h2><center><font color="#FFFFFF" style="font-size:2vw">How To Use</font></center></h2>
+      <p><font color="#FFFFFF" style="font-size:1.5vw">To use this resource, simply copy and paste any body of text and it will output a summarized version. This is still a work in progress. </font></p>
+     <hr>
+
+
+
+<h2><center><font color="#FFFFFF" style="font-size:2vw">Resources Used</font></center></h2>
+  <p><font color="#FFFFFF" style="font-size:1.5vw"><a href="https://openai.com/blog/introducing-chatgpt-and-whisper-apis" >Chat GPT</a> was used to gather examples. Other helpful resources include python librarys such as <a href="https://pandas.pydata.org/" >pandas</a>, <a href="https://pypi.org/project/sumy/">sumy</a>, and <a href="https://www.nltk.org/">nltk</a>.</font></p>
+
+<hr>
+
+</html>
