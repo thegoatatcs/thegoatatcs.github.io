@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'ChatbotDetection'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FAAB6CB8F34E4CD292444E664019E86D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1352F4DE4AE64F15A334E97B5539457A }}
